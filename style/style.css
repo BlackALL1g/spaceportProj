@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --box-shadow: 0 .5rem 1.5rem rgba(156, 142, 142, 0.1);
+    --transparent-white: rgba(255,255,255,.2);
+    --footer-white: rgba(255, 255, 255, 0.904);
+    --border: .2rem 
+}
+
+*{
+    font-family: 'Taviraj', serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #050505;
+}
+
+.header{
+    z-index:2;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: absolute;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.header .logo{
+    font-family: logoFont;
+    font-size: 7rem;
+    text-shadow: .1rem .5rem 1.5rem rgb(255, 13, 170);
+}
+
+@font-face{
+    font-family: logoFont;
+    src: url(../customFonts/BAD\ GRUNGE.ttf);
+}
+
+@font-face{
+    font-family: logoFont2;
+    src: url(../customFonts/Railway\ To\ Hells.ttf);
+}
+
+.header .logo:hover{
+    transform: scale(1.06);
+    transition: .3s;
+    color: yellow;
+}
+
+.header .logo:active{
+    transform: scale(.95);
+    transition: .1s;
+    color: rgb(0, 255, 38);
+}
+
+.header .navbar{
+    margin-left: 24rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 3.5rem;
+}
+
+.header .navbar a:hover{
+    transition: .2s;
+    color: rgb(243, 40, 4);
+}
+
+.header .navbar a:active{
+    transition: .1s;
+    color: rgb(0, 250, 50);
+}
+
+.page1{
+    height: 108vh;
+    padding-top: 28rem;
+}
+
+
+.page1 .container-main{
+    width: 80%;
+    height: 80%;
+}
+
+.page1 .container-main .slide{
+    overflow: hidden;
+    position: relative;
+
+    user-select: none;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:2rem;
+    margin-bottom: 4rem;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* .page1 .container-main .slide img{
+    object-fit: cover;
+    transition: .2s linear;
+} */
+
+.page1 .container-main .slide .content{
+    background: var(--transparent-white);
+    border-radius: .5rem;
+    backdrop-filter: blur(.5rem);
+    box-shadow: var(--box-shadow);
+    margin-top: 21rem;
+    width: 35rem;
+    height: 6rem;
+}
+
+@keyframes PopUp {
+0%{
+    transform: scale(0);
+}
+}
+
+/* .page1 .swiper-slide-active .content{
+    animation:PopUp .2s linear backwards .2s;
+} */
+
+.swiper-pagination{
+    bottom:0 !important;
+}
+
+.page2{
+    height: 108vh;
+    /* display: flex; */
+}
+
+.page2 .heading{
+    z-index: 2;
+    color: aqua;
+    font-size: 4.5rem;
+    /* display: flex; */
+    /* justify-items: center; */
+    background: var(--transparent-white);
+    backdrop-filter: blur(.5rem);
+    border-radius: .5rem;
+    width: 67rem;
+    margin: 1rem 26rem;
+    font-family: logoFont;
+    text-align: center;
+}
+
+.page2 .container-create{
+    
+}
+
+.container-create form{
+    background: var(--transparent-white);
+    border-radius: .5rem;
+    /* display: grid; */
+    /* justify-content: right; */
+    /* gap: 2rem; */
+    width: 20rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin: 1rem;
+}
+
+/* .container-create form .flex{
+    display: grid;
+    gap: 3rem;
+} */
+
+
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    color: rgb(20, 39, 177);
+    color: #E3C79A;
+    text-shadow: var(--footer-white);
+}
+
+.footer .author,
+.footer .links{
+    margin: 0 4rem;
+    backdrop-filter: blur(4rem);
+}
+
+.footer .credit{
+    /* color: ; */
+}
+
+
+.footer .links h5{
+    margin: 0 16rem;
+    font-size: 1.7rem;
+}
+
+.footer .links a{
+    text-transform: capitalize;
+    color: #E1D4B9;
+}
+
+.footer .links a:hover{
+    color: rgb(243, 40, 4);
+    transition: .2s;
+}
+
+.footer .links a:active{
+    transition: .1s;
+    color: rgb(0, 250, 50);
+}
+
+
+@media (max-width:1669px){
+    html{
+        font-size: 85%;
+    }
+}
+
+@media(max-width: 1525px){
+    html{
+        font-size: 70%;
+    }
+}
+
+@media (max-width:1271px){
+    html{
+        font-size: 65%;
+    }
+    .header .navbar{
+        margin-left: 9rem;
+    }
+}
+
+@media(max-width:1035px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:991px){
+    
+    html{
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width:730px){
+    .header .navbar{
+        margin-left: 4rem;
+    }
+}
+
+@media(max-width:700px){
+
+}
+
+@media (max-width:768px){
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+}
