@@ -26,10 +26,77 @@
 
 <?php @include 'header.php';?>
 
+
 <section class="page1" style="background: url(../spaceportProj/img/1957845.jpg) no-repeat">
 
 
+<section class="team">
 
+   <p class="heading">Meet your great team</p>
+
+   <div class="swiper team-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide">
+         <img src="../spaceportProj/img/328965.jpg" alt="">
+            <div class="content">
+               <h3>1 squad</h3>
+               <p>CTO</p>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+         <img src="../spaceportProj/img/39972.jpg" alt="">
+            <div class="content">
+               <h3>Алиса</h3>
+               <p>СIO</p>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+         <img src="../spaceportProj/img/32360.png" alt="">
+            <div class="content">
+               <h3>Steive Rogers and co</h3>
+               <p>2 squad</p>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+         <img src="../spaceportProj/img/44863.jpg" alt="">
+            <div class="content">
+               <h3>Mr. Bald </h3>
+               <p>Guardian</p>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="../spaceportProj/img/328909.jpg" alt="">
+            <div class="content">
+               <h3>Super Squad</h3>
+               <p>support team</p>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="../spaceportProj/img/Avengers.jpg" alt="">
+            <div class="content">
+               <h3>Iron Man sq</h3>
+               <p>Creative dep</p>
+               <!-- <a href="#" class="btn">about us</a> -->
+            </div>
+         </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+   </div>
+
+</section>
+
+
+<!-- 
 <div class="swiper container-main">
     <div class="swiper-wrapper">
         <div class="swiper-slide slide" style="background: url(../spaceportProj/img/39972.jpg) no-repeat">
@@ -37,7 +104,6 @@
             <h3 class="name">name</h3>
             <p class="title">title</p>
             <p class="length-of-service">date</p>
-            <!-- <a href="#" class="btn">try it on your own</a> -->
             </div>
         </div>
         <div class="swiper-slide slide" style="background: url(../spaceportProj/img/328965.jpg) no-repeat">
@@ -45,7 +111,6 @@
             <h3 class="name">name</h3>
             <p class="title">title</p>
             <p class="length-of-service">date</p>
-                <!-- <a href="#" class="btn">try it on your own</a> -->
             </div>
         </div>
         <div class="swiper-slide slide" style="background: url(../spaceportProj/img/44863.jpg) no-repeat">
@@ -53,7 +118,6 @@
             <h3 class="name">name</h3>
             <p class="title">title</p>
             <p class="length-of-service">date</p>
-                <!-- <a href="#" class="btn">try it on your own</a> -->
             </div>
         </div>
         <div class="swiper-slide slide" style="background: url(../spaceportProj/img/32360.png) no-repeat">
@@ -61,7 +125,6 @@
             <h3 class="name">name</h3>
             <p class="title">title</p>
             <p class="length-of-service">date</p>
-                <!-- <a href="#" class="btn">try it on your own</a> -->
             </div>
         </div>
         <div class="swiper-slide slide" style="background: url(../spaceportProj/img/328909.jpg) no-repeat">
@@ -69,7 +132,6 @@
             <h3 class="name">name</h3>
             <p class="title">title</p>
             <p class="length-of-service">date</p>
-                <!-- <a href="#" class="btn">try it on your own</a> -->
             </div>
         </div>
         <div class="swiper-slide slide" style="background: url(../spaceportProj/img/Avengers.jpg) no-repeat">
@@ -77,18 +139,23 @@
             <h3 class="name">name</h3>
             <p class="title">title</p>
             <p class="length-of-service">date</p>
-                <!-- <a href="#" class="btn">try it on your own</a> -->
             </div>
         </div>
-    <!-- <div class="swiper-button-next"></div> -->
-    <!-- <div class="swiper-button-prev"></div> -->
     <div class="swiper-pagination"></div>
     </div>
-</div>
+</div> -->
+
+
+
+
+
+
 </section>
 
 
 <section class="page2" style="background: url(../spaceportProj/img/1957923.jpg) no-repeat">
+
+
 
 <p class="heading">Add new character into your team!</p>
 
@@ -120,6 +187,9 @@
         </div>
     </div>
 </form>
+
+
+
 </section>
 
     
