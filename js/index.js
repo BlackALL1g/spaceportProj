@@ -1,39 +1,25 @@
 
 
+let menu = document.querySelector('#menu-btn')
+let navbar = document.querySelector('.header .navbar')
 
-// var swiper = new Swiper(".container-main", {
+menu.onclick = () => {
+    menu.classList.toggle('fa-times')
+    navbar.classList.toggle('active')
+};
 
-//     slidesPerView: 3,
-//     spaceBetween: 140,
-//     loop: true,
-//     grabCursor: true,
-//     // mousewheel: true,
-    
-//     autoplay: {
-//         delay: 4500,
-//         disableOnInteraction: false,
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-//     breakpoints: {
-//         450:{
-//             slidesPerView:1,
-//         },
-//         1183:{
-//             slidesPerView: 2,
-//         },
-//         1680:{
-//             slidesPerView: 3
-//         },
-//     }
-// });
+window.onscroll = () => {
+    menu.classList.remove('fa-times')
+    navbar.classList.remove('active')
+};
+
+
 
 var swiper = new Swiper(".team-slider", {
     loop:true,
     spaceBetween:40,
     grabCursor:true,
+    // effect:"coverflow",
 
     autoplay: {
         delay: 3500,
@@ -48,10 +34,10 @@ var swiper = new Swiper(".team-slider", {
     //   },
     },
     breakpoints: {
-      450: {
+      0: {
         slidesPerView: 1,
       },
-      768: {
+      550: {
         slidesPerView: 2,
       },
       1000: {
