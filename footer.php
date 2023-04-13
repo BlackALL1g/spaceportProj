@@ -1,4 +1,4 @@
-<section class="footer">
+<section class="footer" id="footer">
 
 <div class="author"><p class="credit">2022 - 2023 <i class="fa-regular fa-copyright" style="color:aqua"></i> created by <span> VKTech </span> | all rights reserved !</p>
 </div>

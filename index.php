@@ -1,26 +1,6 @@
-<?php
-
-// $conn = mysqli_connect('localhost','root','','contact_db');
-
-// if(isset($_POST['send'])){
-
-//     $name =$_POST['name'];
-//     $email =$_POST['email'];
-//     $number =$_POST['number'];
-//     $plan =$_POST['plan'];
-//     $address =$_POST['address'];
-//     $message =$_POST['message'];
-    
-//     $insert = "INSERT INTO `contact_form`(`name`, `email`, `number`, `plan`, `address`, `message`) VALUES ('$name','$email','$number','$plan','$address','$message')";
-    
-//     mysqli_query($conn, $insert);
-
-//     header('location:contact.php');
-    
-// }
-
+<?php 
+@include 'db.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,14 +8,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <!-- set of fav-icon links  -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest"> -->
-
 
     <!-- main fav-icon link -->
     <link rel="shortcut icon" href="../spaceportProj/favicon_io/favicon.ico" type="image/x-icon">
@@ -129,11 +101,11 @@
 
 
 
-<section class="page2" style="background: url(../spaceportProj/img/1957923.jpg) no-repeat">
+<section class="page2" id="page2" style="background: url(../spaceportProj/img/1957923.jpg) no-repeat">
 
 
 
-<p class="heading">Add new character into your team!</p>
+<p class="heading">Add new character into your team !</p>
 
     <section class="create">
     <form action="" method="post"   autocomplete="off">

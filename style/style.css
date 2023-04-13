@@ -117,10 +117,10 @@ body{
 
 #menu-btn{
     /* z-index: 2; */
+    display: none;
+    cursor: pointer;
     font-size: 2.5rem;
     color: var(--black);
-    cursor: pointer;
-    display: none;
 }
 
 
@@ -213,9 +213,6 @@ body{
 
 .page2{
     height: 108vh;
-    /* border: 1px solid #E3C79A; */
-    /* border-bottom: 0; */
-
 }
 
 .page2 .heading{
@@ -264,7 +261,6 @@ body{
     width: 100%;
     padding:1.2rem 1.4rem;
     border:var(--border);
-    /* border-radius: .5rem; */
     font-size: 1.7rem;
     font-weight: bold;
     background: var(--transparent-white);
@@ -294,7 +290,6 @@ body{
 .create .card .drag-area {
 	width: 100%;
 	height: 24rem;
-	border-radius: .5rem;
 	border: var(--border);
 	color: #050505;
 	font-size: 0.9rem;
@@ -324,6 +319,10 @@ body{
     color: yellow;
 }
 
+.create .card .select:active{
+    color: lime;
+}
+
 .create .card .container {
 	width: 100%;
 	height: auto;
@@ -333,31 +332,35 @@ body{
 	flex-wrap: wrap;
 	max-height: 200px;
 	overflow-y: auto;
-	margin-top: 10px;
+    /* fix of incorrect location of draged image */
+	margin-top: -27rem;
+    
 }
 
 
 .create .card .container .image {
 	width: calc(26% - 19px);
-	margin-right: 15px;
-	height: 75px;
-    z-index: 2;
-	position: absolute  ;
+	/* margin-right: 15px; */
+	height: 55px;
+	position: absolute;
 	margin-bottom: 8px;
 }
 
 .create .card .container .image img {
-	width: 100%;
-	height: 100%;
+	/* width: 50rem; */
+	height: 20rem;
+    margin: 0 5vw;
 	border-radius: 5px;
+    position: relative;
 }
 
 .create .card .container .image span {
-    /* z-index: 3; */
-	position: relative;
-	top: -2px;
-	right: 9px;
-	font-size: 20px;
+    z-index: 3;
+	/* position: relative; */
+    /* width: 25rem; */
+    display: flex;
+    justify-content: right;
+	font-size: 3rem;
 	cursor: pointer;
     color: aqua;
 }
@@ -455,21 +458,9 @@ body{
 }
 
 
-@media (max-width:1669px){
-    html{
-        font-size: 80%;
-    }
-}
 
-@media (max-width:1770px){
 
-}
-
-@media(max-width: 1525px){
-    html{
-        font-size: 70%;
-    }
-}
+/* media queries */
 
 @media (max-width:1271px){
     html{
@@ -480,10 +471,25 @@ body{
     }
 }
 
-@media(max-width:1035px){
-    html{
-        font-size: 60%;
+@media (max-width: 1200px){
+    .page1,
+    .page2{
+        background-position: center !important;
+        background-size: cover !important;
     }
+
+    .page1{
+        padding-top: 440px;
+    }
+
+    .page2{
+        padding-top: 20px;
+    }
+
+    .page2 form{
+        margin-top: 200px;
+    }
+    
 }
 
 @media (max-width:991px){
@@ -491,49 +497,58 @@ body{
     html{
         font-size: 55%;
     }
-
-    /* .page1 img,
-    .page2 img{
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    } */
-
 }
 
+@media (max-width:815px){
 
-/* galaxy */
-
-@media (max-width:915){
-    
-}
-
-@media (max-width:730px){
-    .header .navbar{
-        margin-left: 4rem;
+    .page1{
+        padding-top: 450px;
     }
-}
 
-@media(max-width:700px){
+    .header{
+        width: 80%;
+        margin: 30px 10%;
+    }
 
+    .page2{
+        padding-top: 20px;
+    }
+
+    /* good move  */
+
+    .page2 .heading{
+        width: 50%;
+        margin: 0 25%;
+    }
+    /*  !!! */
+
+    .page2 form{
+        margin: 150px 30px;
+    }
+
+    .create .card .container .image img {
+        width: 300px;
+    }
 }
 
 @media (max-width:768px){
 
-    /* .page2 .heading{
-        display: grid;
-    } */
+    .header{
+        width: 50%;
+        margin: 0 25%;
+    }
+
+    .create .card .container .image img {
+        width: 240px;
+    }
     
     #menu-btn{
         display: inline-block;
         transition: .2s linear;
-        margin-left: -8rem;
-        margin-right: 2rem;
     }
 
     #menu-btn.fa-times{
         transform: rotate(180deg);
-        display: none;
     }
     
     .header .navbar{
@@ -551,24 +566,13 @@ body{
     }
 
     .header .navbar a{
-        /* display: grid; */
         display: block;
-        /* margin: 5rem; */
         text-align: center;
     }
 
-    .page1,
-    .page2{
-        /* height: 32rem;
-        overflow: hidden;
-        position: relative;
-        margin-bottom: 4rem;
-        height: 100%;
-        width: 100%;
-        object-fit: cover; */
-        /* height: 600px; */
-        /* width: 360px; */
-    }
+    .page1{
+        padding-top: 45rem;
+    }    
     
 }
 
@@ -584,8 +588,30 @@ body{
     html{
         font-size: 50%;
     }
-    .contact form .btn{
-        display: block;
-        width: 100%;
+
+    .header .navbar{
+        margin-left: 1rem;
     }
+    
+    .page1{
+        padding-top: 45rem;
+    }
+
+    .page2 form{
+        width: 90%;
+        margin: 20px 5%;
+    }
+
+}
+
+@media (max-width:375px) {
+
+    .page1{
+        padding-top: 35rem;
+    }
+    
+    .header{
+        margin-top: -30px;
+    }
+
 }

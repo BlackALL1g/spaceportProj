@@ -61,7 +61,7 @@ dragArea.addEventListener('drop', e => {
 
 	let file = e.dataTransfer.files;
 	for (let i = 0; i < file.length; i++) {
-		/** Check selected file is image */
+		/** Check if selected file is image */
 		if (file[i].type.split("/")[0] != 'image') continue;
 		
 		if (!files.some(e => e.name == file[i].name)) files.push(file[i])
