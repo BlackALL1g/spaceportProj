@@ -61,7 +61,7 @@ body{
 
 @font-face{
     font-family: logoFont;
-    src: url(../customFonts/BAD\ GRUNGE.ttf);
+    src: url(../style/customFonts/BAD\ GRUNGE.ttf);
 }
 
 .header .logo:hover{

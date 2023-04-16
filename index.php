@@ -1,7 +1,3 @@
-<?php 
-@include 'db.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- main fav-icon link -->
-    <link rel="shortcut icon" href="../spaceportProj/favicon_io/favicon.ico" type="image/x-icon">
-   
     <title>team maker</title>
-
+    
+    <!-- main fav-icon link -->
+    <link rel="shortcut icon" href="../spaceportProj/style/favicon_io/android-chrome-512x512.png" type="image/x-icon">
     <!-- font awesome import -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- local style link -->
@@ -29,6 +24,43 @@
 
 <section class="page1" style="background: url(../spaceportProj/img/1957845.jpg) no-repeat">
 
+
+<?php 
+// @include '../spaceportProj/uploads/db/Config.php';
+$db = mysqli_init();
+if ($db->connect('localhost', 'root', '', 'team_db')):
+    $arr = $db->execute_query("SELECT * FROM `hero` order by id asc");
+    if (!$arr) echo "what!?";
+    else $arr = $arr->fetch_all();?>   
+    <section class="team">
+
+    <p class="heading">Meet your great team</p>
+    <div class="swiper team-slider">
+    <div class="swiper-wrapper">
+        <?php foreach ($arr as $key => list($id, $name, $title, $picture)): ?>
+            <div class="swiper-slide slide">
+                <img src="<?php 
+                    if ($picture === "" || $picture == null){
+                        $dirimg = scandir("../spaceportProj/img");
+                        $path = "../spaceportProj/img/39972.jpg";
+                        if (count($dirimg) != 0) {
+                            $path = "../spaceportProj/img/" . $dirimg[random_int(0, count($dirimg))];
+                        }
+                        echo $path;
+                    } 
+                    else echo $picture;
+                    ?>" alt="img">
+                    <div class="content">
+                    <h3><?php echo $title; ?></h3>
+                    <p><?php echo $name; ?></p>
+                </div>
+            </div>
+        <?php endforeach;?>
+    </div>
+<div class="swiper-pagination"></div>   
+</div>
+    </section>
+<?php else: ?>
 
     <section class="team">
 
@@ -97,6 +129,7 @@
 
 
 
+<?php endif; ?>
 </section>
 
 
@@ -107,17 +140,19 @@
 
 <p class="heading">Add new character into your team !</p>
 
+
     <section class="create">
-    <form action="" method="post"   autocomplete="off">
+    <form autocomplete="off" id="addform">
     <div class="flex">
         <div class="inputBox">
             <span>character's name</span>
-            <input type="text" placeholder="enter new name" name="name" required>
+            <input type="text" placeholder="enter new name" name="name" required/>
         </div>
         <div class="inputBox">
             <span>character's title</span>
-            <input type="text" placeholder="enter new title" name="title" required>
+            <input type="text" placeholder="enter new title" name="title" required/>
         </div>
+
         <div class="card">
 
     	    <div class="drag-area">
@@ -125,7 +160,9 @@
                     <span class="select" role="button">Drag & drop image here or Browse</span>
                 </span>
 			<span class="on-drop">Drop images here</span>
-    		<input name="file" type="file" class="file" accept="image/*" required>
+    		<input type="file" class="file" accept="image/png, image/jpeg" src="" alt="" name="picture" required/>
+            <!-- changed name file to picture. It may break d & d -->
+    		<!-- <input type="file" name="file"  class="file" required> -->
     	    </div>
 
             <!-- IMAGE PREVIEW CONTAINER -->
@@ -134,7 +171,7 @@
         </div>
 
     </div>
-    <input type="submit" value="create new character" name="send" class="btn">
+    <input type="submit" value="create new character" name="send" class="btn" id="addform_btn"/>
     </form>
 
 
@@ -146,16 +183,19 @@
     
 <?php @include 'footer.php';?>
 
-<!-- drag & drop  -->
-<!-- <script src="app.js"></script> -->
 
-<!-- Swiper JS -->
+
+<!-- Swiper JS link -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- swiper & navBar script -->
+<script src="../spaceportProj/js/swiper.js"></script>
+
+<!-- Submit form data via Ajax -->
+<script src="../spaceportProj/js/submitAjax.js"></script>
 
 <!-- drag and drop script -->
 <script src="../spaceportProj/js/dragNdrop.js"></script>
 
-<!-- javascript link -->
-<script src="js/index.js"></script>
 </body>
 </html>
