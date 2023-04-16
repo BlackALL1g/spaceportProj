@@ -15,34 +15,5 @@ window.onscroll = () => {
 
 
 
-var swiper = new Swiper(".team-slider", {
-    loop:true,
-    spaceBetween:40,
-    grabCursor:true,
-    // effect:"coverflow",
 
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
-    
-    pagination: {
-      el: ".swiper-pagination",
-      clickable:true,
-    //   renderBullet: function (index, className) {
-    //     return '<span class="' + className + '">' + (index + 1) + "</span>";
-    //   },
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      550: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 3,
-      },
-    },
-  });
 

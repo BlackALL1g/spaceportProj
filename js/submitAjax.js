@@ -1,3 +1,20 @@
+function update(ev)  {
+    fetch('api/select.php')
+    .then(res => {
+        return res.text();
+    })
+    .then(text => {
+        document.querySelector('.team-slider').innerHTML = text;
+        console.log(text);
+    })
+    .catch(error => {
+        console.log('error add heroes', error);
+        // todo : make warning to user
+    });
+};
+
+window.onload = update;
+
 
 const form = document.getElementById("addform");
 form.onsubmit = (ev) => {
@@ -23,6 +40,7 @@ form.onsubmit = (ev) => {
     .then(json => {
         /// todo : make method async update first page
         console.log("F5", json);
+        update(ev);
     })
     .catch(error => {
         console.log('error add heroes', error);

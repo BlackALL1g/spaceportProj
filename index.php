@@ -23,44 +23,15 @@
 
 
 <section class="page1" style="background: url(../spaceportProj/img/1957845.jpg) no-repeat">
-
-
-<?php 
-// @include '../spaceportProj/uploads/db/Config.php';
-$db = mysqli_init();
-if ($db->connect('localhost', 'root', '', 'team_db')):
-    $arr = $db->execute_query("SELECT * FROM `hero` order by id asc");
-    if (!$arr) echo "what!?";
-    else $arr = $arr->fetch_all();?>   
-    <section class="team">
+<section class="team">
 
     <p class="heading">Meet your great team</p>
-    <div class="swiper team-slider">
-    <div class="swiper-wrapper">
-        <?php foreach ($arr as $key => list($id, $name, $title, $picture)): ?>
-            <div class="swiper-slide slide">
-                <img src="<?php 
-                    if ($picture === "" || $picture == null){
-                        $dirimg = scandir("../spaceportProj/img");
-                        $path = "../spaceportProj/img/39972.jpg";
-                        if (count($dirimg) != 0) {
-                            $path = "../spaceportProj/img/" . $dirimg[random_int(0, count($dirimg))];
-                        }
-                        echo $path;
-                    } 
-                    else echo $picture;
-                    ?>" alt="img">
-                    <div class="content">
-                    <h3><?php echo $title; ?></h3>
-                    <p><?php echo $name; ?></p>
-                </div>
-            </div>
-        <?php endforeach;?>
+    <div class="swiper team-slider"></div>
+    <div class="swiper-pagination"></div>   
     </div>
-<div class="swiper-pagination"></div>   
-</div>
-    </section>
-<?php else: ?>
+</section>
+    <!-- DEBUG -->
+<?php if (false): ?>
 
     <section class="team">
 
@@ -130,6 +101,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 
 
 <?php endif; ?>
+
 </section>
 
 
@@ -188,11 +160,12 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 <!-- Swiper JS link -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+<!-- Submit form data via Ajax -->
+<script src="../spaceportProj/js/submitAjax.js"></script>
+
 <!-- swiper & navBar script -->
 <script src="../spaceportProj/js/swiper.js"></script>
 
-<!-- Submit form data via Ajax -->
-<script src="../spaceportProj/js/submitAjax.js"></script>
 
 <!-- drag and drop script -->
 <script src="../spaceportProj/js/dragNdrop.js"></script>
