@@ -23,6 +23,7 @@ form.onsubmit = (ev) => {
     .then(json => {
         /// todo : make method async update first page
         console.log("F5", json);
+        alert('ready!!!')
     })
     .catch(error => {
         console.log('error add heroes', error);

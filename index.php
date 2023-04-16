@@ -51,8 +51,8 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
                     else echo $picture;
                     ?>" alt="img">
                     <div class="content">
-                    <h3><?php echo $title; ?></h3>
-                    <p><?php echo $name; ?></p>
+                    <h3><?php echo $name;?></h3>
+                    <p><?php echo $title; ?></p>
                 </div>
             </div>
         <?php endforeach;?>
