@@ -6,6 +6,7 @@ PHP, HTML, CSS, JavaScript, Swiper.js, jQuery, Ajax, MySql.
 Task: 
 
 Что сделать:
+
     1. Сверстать страницу - done
     
     2. Сделать адаптив - done
