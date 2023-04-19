@@ -2,6 +2,7 @@
 const form = document.getElementById("addform");
 form.onsubmit = (ev) => {
     ev.preventDefault();
+    // const bodyData = new For
     const bodyData = new FormData(form);
     // todo : make warning to user
     if (bodyData.get('name') === null || 
@@ -23,7 +24,7 @@ form.onsubmit = (ev) => {
     .then(json => {
         /// todo : make method async update first page
         console.log("F5", json);
-        alert('ready!!!')
+        alert('ready!!! reload the page!')
     })
     .catch(error => {
         console.log('error add heroes', error);

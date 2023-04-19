@@ -368,11 +368,12 @@ body{
 /* dragover class will be used in drag and drop system */
 .create .card .drag-area.dragover {
     backdrop-filter:  blur(.2rem);
+    font-size: 3rem;
 }
 
 .create .card .drag-area.dragover .on-drop {
 	display: inline;
-	font-size: 1.7rem;
+	/* font-size: 1.7rem; */
 }
 
 .create .card input,

@@ -25,7 +25,6 @@ function load_pict($file, $conf) {
 }
 
 
-
 $name = $_POST['name'];
 $title = $_POST['title'];
 print_r($_POST);print_r($_FILES);

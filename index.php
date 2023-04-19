@@ -26,17 +26,19 @@
 
 
 <?php 
-// @include '../spaceportProj/uploads/db/Config.php';
 $db = mysqli_init();
 if ($db->connect('localhost', 'root', '', 'team_db')):
     $arr = $db->execute_query("SELECT * FROM `hero` order by id asc");
     if (!$arr) echo "what!?";
-    else $arr = $arr->fetch_all();?>   
+    else $arr = $arr->fetch_all();?>  
     <section class="team">
 
     <p class="heading">Meet your great team</p>
+
     <div class="swiper team-slider">
+
     <div class="swiper-wrapper">
+
         <?php foreach ($arr as $key => list($id, $name, $title, $picture)): ?>
             <div class="swiper-slide slide">
                 <img src="<?php 
@@ -57,8 +59,10 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
         <?php endforeach;?>
     </div>
+
 <div class="swiper-pagination"></div>   
 </div>
+
     </section>
 <?php else: ?>
 
@@ -136,10 +140,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 
 <section class="page2" id="page2" style="background: url(../spaceportProj/img/1957923.jpg) no-repeat">
 
-
-
 <p class="heading">Add new character into your team !</p>
-
 
     <section class="create">
     <form autocomplete="off" id="addform">
