@@ -5,7 +5,8 @@ PHP, HTML, CSS, JavaScript, Swiper.js, jQuery, Ajax, MySql.
 
 Adaptive's been made for the next devices:
 
-../img/compatibility.png
+![alt text](./img/compatibility.png)
+
 
 
 Task: 
