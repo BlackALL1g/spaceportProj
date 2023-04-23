@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>team maker</title>
-    
+
     <!-- main fav-icon link -->
-    <link rel="shortcut icon" href="../spaceportProj/style/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./style/favicon_io/android-chrome-512x512.png" type="image/x-icon">
     <!-- font awesome import -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- local style link -->
@@ -22,7 +22,7 @@
 <?php @include 'header.php';?>
 
 
-<section class="page1" style="background: url(../spaceportProj/img/1957845.jpg) no-repeat">
+<section class="page1" style="background: url(./img/1957845.jpg) no-repeat">
 
 
 <?php 
@@ -43,10 +43,10 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             <div class="swiper-slide slide">
                 <img src="<?php 
                     if ($picture === "" || $picture == null){
-                        $dirimg = scandir("../spaceportProj/img");
-                        $path = "../spaceportProj/img/39972.jpg";
+                        $dirimg = scandir("./img");
+                        $path = "./img/39972.jpg";
                         if (count($dirimg) != 0) {
-                            $path = "../spaceportProj/img/" . $dirimg[random_int(0, count($dirimg))];
+                            $path = "./img/" . $dirimg[random_int(0, count($dirimg))];
                         }
                         echo $path;
                     } 
@@ -75,7 +75,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
         <div class="swiper-wrapper">
 
             <div class="swiper-slide slide">
-            <img src="../spaceportProj/img/328965.jpg" alt="">
+            <img src="./img/328965.jpg" alt="">
                 <div class="content">
                 <h3>1 squad</h3>
                 <p>CTO</p>
@@ -83,7 +83,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-            <img src="../spaceportProj/img/39972.jpg" alt="">
+            <img src="./img/39972.jpg" alt="">
                 <div class="content">
                 <h3>Алиса</h3>
                 <p>СIO</p>
@@ -91,7 +91,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-            <img src="../spaceportProj/img/32360.png" alt="">
+            <img src="./img/32360.png" alt="">
                 <div class="content">
                 <h3>Steive Rogers and co</h3>
                 <p>2 squad</p>
@@ -99,7 +99,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-            <img src="../spaceportProj/img/44863.jpg" alt="">
+            <img src="./img/44863.jpg" alt="">
                 <div class="content">
                 <h3>Mr. Bald </h3>
                 <p>Guardian</p>
@@ -107,7 +107,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-                <img src="../spaceportProj/img/328909.jpg" alt="">
+                <img src="./img/328909.jpg" alt="">
                 <div class="content">
                 <h3>Super Squad</h3>
                 <p>support team</p>
@@ -115,11 +115,10 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-                <img src="../spaceportProj/img/Avengers.jpg" alt="">
+                <img src="./img/Avengers.jpg" alt="">
                 <div class="content">
                 <h3>Iron Man sq</h3>
                 <p>Creative dep</p>
-                <!-- <a href="#" class="btn">about us</a> -->
                 </div>
             </div>
 
@@ -138,7 +137,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 
 
 
-<section class="page2" id="page2" style="background: url(../spaceportProj/img/1957923.jpg) no-repeat">
+<section class="page2" id="page2" style="background: url(./img/1957923.jpg) no-repeat">
 
 <p class="heading">Add new character into your team !</p>
 
@@ -162,12 +161,11 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
                 </span>
 			<span class="on-drop">Drop images here</span>
     		<input type="file" class="file" accept="image/png, image/jpeg" src="" alt="" name="picture" required/>
-            <!-- changed name file to picture. It may break d & d -->
-    		<!-- <input type="file" name="file"  class="file" required> -->
-    	    </div>
+
+            </div>
 
             <!-- IMAGE PREVIEW CONTAINER -->
-            <div class="container"></div>
+            <div class="container" id="container"></div>
 
         </div>
 
@@ -190,13 +188,13 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!-- swiper & navBar script -->
-<script src="../spaceportProj/js/swiper.js"></script>
+<script src="./js/swiper.js"></script>
 
 <!-- Submit form data via Ajax -->
-<script src="../spaceportProj/js/submitAjax.js"></script>
+<script src="./js/submitAjax.js"></script>
 
 <!-- drag and drop script -->
-<script src="../spaceportProj/js/dragNdrop.js"></script>
+<script src="./js/dragNdrop.js"></script>
 
 </body>
 </html>

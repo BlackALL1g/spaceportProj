@@ -11,7 +11,7 @@ form.onsubmit = (ev) => {
         return;
     // console.log();
     
-    fetch("api/addHeroes.php", {
+    fetch("../api/addHeroes.php", {
         body:  bodyData ,
         method: 'post'
     })

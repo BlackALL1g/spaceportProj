@@ -8,9 +8,9 @@ $cfg = [
     "username" => 'root',
     "password" =>  '',
     "database" => 'team_db',
-    "port" => 3307,
-    "dir" => '/opt/lampp/htdocs/workSpace2/spaceportProj/',
-    "imgDir" => 'img/myheroes/'
+    // "port" => 3307,
+    // "dir" => '../',
+    "imgDir" => '/img/myheroes/'
 ];
 
 
@@ -19,7 +19,7 @@ function load_pict($file, $conf) {
     $to = '../'.$conf['imgDir'] . $file['name'];
     print_r($file);
     if (is_uploaded_file($tmp_path) && rename($tmp_path, $to)) {
-        return '../spaceportProj/'.$conf['imgDir'] . $file['name'];
+        return '../'.$conf['imgDir'] . $file['name'];
     }
     return "";
 }
