@@ -11,7 +11,7 @@ form.onsubmit = (ev) => {
         return;
     // console.log();
     
-    fetch("../api/addHeroes.php", {
+    fetch("./api/addHeroes.php", {
         body:  bodyData ,
         method: 'post'
     })
@@ -28,6 +28,6 @@ form.onsubmit = (ev) => {
     })
     .catch(error => {
         console.log('error add heroes', error);
-        // todo : make warning to user
+        alert('something went wrong, not added!')
     });
 };

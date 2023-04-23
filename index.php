@@ -30,7 +30,7 @@ $db = mysqli_init();
 if ($db->connect('localhost', 'root', '', 'team_db')):
     $arr = $db->execute_query("SELECT * FROM `hero` order by id asc");
     if (!$arr) echo "what!?";
-    else $arr = $arr->fetch_all();?>  
+    else $arr = $arr->fetch_all();?>
     <section class="team">
 
     <p class="heading">Meet your great team</p>
@@ -75,7 +75,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
         <div class="swiper-wrapper">
 
             <div class="swiper-slide slide">
-            <img src="./img/328965.jpg" alt="">
+            <img src="./img/myheroes/328965.jpg" alt="">
                 <div class="content">
                 <h3>1 squad</h3>
                 <p>CTO</p>
@@ -83,7 +83,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-            <img src="./img/39972.jpg" alt="">
+            <img src="./img/myheroes/39972.jpg" alt="">
                 <div class="content">
                 <h3>Алиса</h3>
                 <p>СIO</p>
@@ -91,7 +91,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-            <img src="./img/32360.png" alt="">
+            <img src="./img/myheroes/32360.png" alt="">
                 <div class="content">
                 <h3>Steive Rogers and co</h3>
                 <p>2 squad</p>
@@ -99,7 +99,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-            <img src="./img/44863.jpg" alt="">
+            <img src="./img/myheroes/44863.jpg" alt="">
                 <div class="content">
                 <h3>Mr. Bald </h3>
                 <p>Guardian</p>
@@ -107,7 +107,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
             </div>
 
             <div class="swiper-slide slide">
-                <img src="./img/328909.jpg" alt="">
+                <img src="./img/myheroes/328909.jpg" alt="">
                 <div class="content">
                 <h3>Super Squad</h3>
                 <p>support team</p>

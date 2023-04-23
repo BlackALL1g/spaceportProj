@@ -2,16 +2,19 @@
 
 <?php
 
+// $db = mysqli_init();/
 
 $cfg = [
-    "hostname" => "localhost",
+    "hostname" => 'localhost',
     "username" => 'root',
     "password" =>  '',
     "database" => 'team_db',
     // "port" => 3307,
-    // "dir" => '../',
+    "dir" => '../',
     "imgDir" => '/img/myheroes/'
 ];
+
+// if ($db->connect('localhost', 'root', '', 'team_db')):
 
 
 function load_pict($file, $conf) {
@@ -27,14 +30,14 @@ function load_pict($file, $conf) {
 
 $name = $_POST['name'];
 $title = $_POST['title'];
-print_r($_POST);print_r($_FILES);
-$pictUri = load_pict($_FILES['picture'], $cfg);
-if ($pictUri == "") {
+print_r($_POST); print_r($_FILES);
+$pictUrl = load_pict($_FILES['picture'], $cfg);
+if ($pictUrl == "") {
     echo "error";
     exit(1);
 }
 
-$sql = "INSERT INTO `hero`(`name`, `title`, `picture`) VALUES ('$name','$title','$pictUri')";
+$sql = "INSERT INTO `hero`(`name`, `title`, `picture`) VALUES ('$name','$title','$pictUrl')";
 
 print_r($sql);
 
