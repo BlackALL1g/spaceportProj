@@ -41,20 +41,24 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 
         <?php foreach ($arr as $key => list($id, $name, $title, $picture)): ?>
             <div class="swiper-slide slide">
-                <img src="<?php 
-                    if ($picture === "" || $picture == null){
-                        $dirimg = scandir("./img");
-                        $path = "./img/39972.jpg";
-                        if (count($dirimg) != 0) {
-                            $path = "./img/" . $dirimg[random_int(0, count($dirimg))];
-                        }
-                        echo $path;
-                    } 
-                    else echo $picture;
-                    ?>" alt="img">
-                    <div class="content">
-                    <h3><?php echo $name;?></h3>
-                    <p><?php echo $title; ?></p>
+
+                <img src="<?php echo $picture;
+
+                // if ($picture === "" || $picture == null){
+                //     $dirimg = scandir("./img");
+                //     $path = "./img/39972.jpg";
+                //     if (count($dirimg) != 0) {
+                //         $path = "./img/" . $dirimg[random_int(0, count($dirimg))];
+                //     }
+                //     echo $path;
+                // }
+                
+                ?>" alt="img">
+
+                <div class="content">
+                <h3><?php echo $name;?></h3>
+                <p><?php echo $title; ?></p>
+
                 </div>
             </div>
         <?php endforeach;?>
@@ -64,7 +68,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 </div>
 
     </section>
-<?php else: ?>
+<?php else:?>
 
     <section class="team">
 
@@ -75,50 +79,58 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
         <div class="swiper-wrapper">
 
             <div class="swiper-slide slide">
-            <img src="./img/myheroes/328965.jpg" alt="">
+            <img src="./img/myheroes/44843.jpg" alt="">
                 <div class="content">
-                <h3>1 squad</h3>
-                <p>CTO</p>
+                <h3>_Тимур_и_его_команда_</h3>
+                <p>front</p>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
             <img src="./img/myheroes/39972.jpg" alt="">
                 <div class="content">
-                <h3>Алиса</h3>
-                <p>СIO</p>
+                <h3>_Маша_Иванова_</h3>
+                <p>middle</p>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
             <img src="./img/myheroes/32360.png" alt="">
                 <div class="content">
-                <h3>Steive Rogers and co</h3>
-                <p>2 squad</p>
+                <h3>Иван_и_КО</h3>
+                <p>Back</p>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
-            <img src="./img/myheroes/44863.jpg" alt="">
+            <img src="./img/myheroes/328909.jpg" alt="">
                 <div class="content">
-                <h3>Mr. Bald </h3>
-                <p>Guardian</p>
+                <h3>Кулагин и Партнёры</h3>
+                <p>Support</p>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
-                <img src="./img/myheroes/328909.jpg" alt="">
+                <img src="./img/myheroes/44863.jpg" alt="">
                 <div class="content">
-                <h3>Super Squad</h3>
-                <p>support team</p>
+                <h3>Чей-то сын</h3>
+                <p>Leader</p>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
-                <img src="./img/Avengers.jpg" alt="">
+                <img src="./img/myheroes/328965.jpg" alt="">
                 <div class="content">
-                <h3>Iron Man sq</h3>
-                <p>Creative dep</p>
+                <h3>Седьмой "Б"</h3>
+                <p>Heroes</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="./img/myheroes/4408133.jpg" alt="">
+                <div class="content">
+                <h3>Лариса</h3>
+                <p>Всемогущая</p>
                 </div>
             </div>
 
@@ -160,7 +172,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
                     <span class="select" role="button">Drag & drop image here or Browse</span>
                 </span>
 			<span class="on-drop">Drop images here</span>
-    		<input type="file" class="file" accept="image/png, image/jpeg" src="" alt="" name="picture" required/>
+    		<input type="file" class="file" accept="image/png, image/jpeg, image/jpg, image/pdf" src="" alt="" name="picture" required/>
 
             </div>
 
