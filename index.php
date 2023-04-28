@@ -22,7 +22,7 @@
 <?php @include 'header.php';?>
 
 
-<section class="page1" style="background: url(./img/1957845.jpg) no-repeat">
+<section class="page1" id="page1" style="background: url(./img/1957845.jpg) no-repeat">
 
 
 <?php 
@@ -42,18 +42,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
         <?php foreach ($arr as $key => list($id, $name, $title, $picture)): ?>
             <div class="swiper-slide slide">
 
-                <img src="<?php echo $picture;
-
-                // if ($picture === "" || $picture == null){
-                //     $dirimg = scandir("./img");
-                //     $path = "./img/39972.jpg";
-                //     if (count($dirimg) != 0) {
-                //         $path = "./img/" . $dirimg[random_int(0, count($dirimg))];
-                //     }
-                //     echo $path;
-                // }
-                
-                ?>" alt="img">
+                <img src="<?php echo $picture;?>" alt="img">
 
                 <div class="content">
                 <h3><?php echo $name;?></h3>
@@ -144,7 +133,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 
 
 
-<?php endif; ?>
+<?php endif;?>
 </section>
 
 
@@ -172,12 +161,14 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
                     <span class="select" role="button">Drag & drop image here or Browse</span>
                 </span>
 			<span class="on-drop">Drop images here</span>
-    		<input type="file" class="file" accept="image/png, image/jpeg, image/jpg, image/pdf" src="" alt="" name="picture" required/>
+    		<input type="file" class="file" accept="image/png, image/jpeg, image/jpg, image/pdf" alt="" name="picture"/>
 
             </div>
 
             <!-- IMAGE PREVIEW CONTAINER -->
-            <div class="container" id="container"></div>
+            <div class="container" id="container" accept="image/png, image/jpeg, image/jpg, image/pdf" alt="" name="container">
+
+            </div>
 
         </div>
 

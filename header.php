@@ -3,7 +3,7 @@
 <a href="index.php" class="logo">Team Maker</a>
 
 <nav class="navbar">
-    <a href="index.php">main</a>
+    <a href="#page1">main</a>
     <a href="#page2">create</a>
     <a href="#footer">links</a>
 </nav>

@@ -44,7 +44,9 @@ INSERT INTO `hero` (`id`, `name`, `title`, `picture`) VALUES
 (19, 'Иван и КО', 'Back', './img/myheroes/32360.png'),
 (20, 'Кулагин и Партнёры', 'Support', './img/myheroes/328909.jpg'),
 (21, 'Чей-то сын', 'Leader', './img/myheroes/44863.jpg'),
-(22, 'Седьмой \"Б\"', 'Heroes', './img/myheroes/328965.jpg');
+(22, 'Седьмой \"Б\"', 'Heroes', './img/myheroes/328965.jpg'),
+(23, 'Лариса', 'Всемогущая', './img/myheroes/4408133.jpg');
+
 
 --
 -- Indexes for dumped tables

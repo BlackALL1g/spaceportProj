@@ -7,6 +7,7 @@ form.onsubmit = (ev) => {
     if (bodyData.get('name') === null || 
         bodyData.get('title') === null ||
         bodyData.get('picture') === null)
+        // console.log();
         return;
     
     fetch("./api/addHeroes.php", {
@@ -21,6 +22,7 @@ form.onsubmit = (ev) => {
     })
     .then(json => {
         /// todo : make method async update first page
+            
         console.log("submitAjax success", json);
         alert('ready!!! reload the page!')
     })
@@ -28,4 +30,6 @@ form.onsubmit = (ev) => {
         console.log('submitAjax failure', error);
         alert('something went wrong, not added!')
     });
+    
+    // .catch(error => console.log('submitAjax failure', error));
 };
