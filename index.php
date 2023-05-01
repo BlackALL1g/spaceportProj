@@ -27,7 +27,7 @@
 
 <?php 
 $db = mysqli_init();
-if ($db->connect('localhost', 'root', '', 'team_db')):
+if ($db->connect('localhost', 'root', '', 'team_database')):
     $arr = $db->execute_query("SELECT * FROM `hero` order by id asc");
     if (!$arr) echo "what!?";
     else $arr = $arr->fetch_all();?>
@@ -143,7 +143,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
 <p class="heading">Add new character into your team !</p>
 
     <section class="create">
-    <form autocomplete="off" id="addform">
+    <form action="./api/addHeroes.php" method="post" autocomplete="off" id="addform" enctype="multipart/form-data">
     <div class="flex">
         <div class="inputBox">
             <span>character's name</span>
@@ -161,7 +161,7 @@ if ($db->connect('localhost', 'root', '', 'team_db')):
                     <span class="select" role="button">Drag & drop image here or Browse</span>
                 </span>
 			<span class="on-drop">Drop images here</span>
-    		<input type="file" class="file" accept="image/png, image/jpeg, image/jpg, image/pdf" alt="" name="picture"/>
+    		<input type="file" class="file" accept="image/png, image/jpeg, image/jpg, image/pdf" alt="" name="picture" enctype='multipart/form-data' required/>
 
             </div>
 
