@@ -2,8 +2,8 @@
 
 <?php
 
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 $cfg = [
     'hostname' => 'localhost',
@@ -18,7 +18,7 @@ $cfg = [
 // the most problematic function
 
 function load_pict($file, $conf) {
-    if ($file['size']<1500000) {
+    if ($file['size']<2000000) {
 
         // Make sure that the form was submitted with the POST method before processing the file upload
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -33,14 +33,16 @@ function load_pict($file, $conf) {
                 echo "Invalid file type ";
             } else {
                 // Move the uploaded file to the specified directory
-                $target_dir = "img/heroes/";
+                $target_dir = $conf['dir']."img/myheroes/";
+                chmod($target_dir, 0777);
                 $target_file = $target_dir . basename($file['name']);
                 if (move_uploaded_file($file['tmp_name'], $target_file)) {
+
                 return $conf['imgDir'] . $file['name'];
                 }
                 
                 // Redirect back to the homepage
-                header("Location: addHeroes.php?uploadSuccess");
+                // header("Location: ../index.php?uploadSuccess");
             }
             } else {
             echo "File upload failed";
