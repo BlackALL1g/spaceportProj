@@ -10,8 +10,8 @@ $cfg = [
     'username' => 'root',
     'password' =>  '',
     'database' => 'team_database',
-    'port' => 3307,
-    'dir' => '/opt/lampp/htdocs/workSpace2/teamMaker/',
+    // 'port' => 3307,
+    // 'dir' => '/opt/lampp/htdocs/workSpace2/teamMaker/',
     'imgDir' => './img/myheroes/'
 ];
 
@@ -27,22 +27,23 @@ function load_pict($file, $conf) {
             // Check the file type and size
             $allowed_types = array('jpeg', 'jpg', 'png', 'gif');
             $file_type = pathinfo($file['name'], PATHINFO_EXTENSION);
-            $file_size = $file['size'];
+            // $file_size = $file['size'];
         
             if (!in_array(strtolower($file_type), $allowed_types)) {
                 echo "Invalid file type ";
             } else {
                 // Move the uploaded file to the specified directory
-                $target_dir = $conf['dir']."img/myheroes/";
-                chmod($target_dir, 0777);
-                $target_file = $target_dir . basename($file['name']);
+                // $target_dir = $conf['dir']."img/myheroes/";
+                // chmod($target_dir, 0777);
+                // $target_file = $target_dir . basename($file['name']);
+                $target_file = '.'.$conf['imgDir'] . basename($file['name']);
                 if (move_uploaded_file($file['tmp_name'], $target_file)) {
 
                 return $conf['imgDir'] . $file['name'];
                 }
                 
-                // Redirect back to the homepage
-                // header("Location: ../index.php?uploadSuccess");
+                // Redirect back to the homepage (doesn't work)
+                // header("Location: ./api/addHeroes.php?uploadSuccess");
             }
             } else {
             echo "File upload failed";
