@@ -27,8 +27,8 @@
 
 <?php 
 $db = mysqli_init();
-if ($db->connect('localhost', 'root', '', 'team_database')):
-    $arr = $db->execute_query("SELECT * FROM `hero` order by id asc");
+if ($db->real_connect('localhost', 'root', '', 'team_database')):
+    $arr = $db->query("SELECT * FROM `hero` order by id asc");
     if (!$arr) echo "what!?";
     else $arr = $arr->fetch_all();?>
     <section class="team">
@@ -57,6 +57,9 @@ if ($db->connect('localhost', 'root', '', 'team_database')):
 </div>
 
     </section>
+
+    <!-- spare option in case db doesn't work -->
+
 <?php else:?>
 
     <section class="team">
@@ -86,7 +89,7 @@ if ($db->connect('localhost', 'root', '', 'team_database')):
             <div class="swiper-slide slide">
             <img src="./img/myheroes/32360.png" alt="">
                 <div class="content">
-                <h3>Иван_и_КО</h3>
+                <h3>_Иван_и_КО_</h3>
                 <p>Back</p>
                 </div>
             </div>
@@ -94,7 +97,7 @@ if ($db->connect('localhost', 'root', '', 'team_database')):
             <div class="swiper-slide slide">
             <img src="./img/myheroes/328909.jpg" alt="">
                 <div class="content">
-                <h3>Кулагин и Партнёры</h3>
+                <h3>_Кулагин_и_Партнёры_</h3>
                 <p>Support</p>
                 </div>
             </div>
@@ -102,7 +105,7 @@ if ($db->connect('localhost', 'root', '', 'team_database')):
             <div class="swiper-slide slide">
                 <img src="./img/myheroes/44863.jpg" alt="">
                 <div class="content">
-                <h3>Чей-то сын</h3>
+                <h3>_Чей-то_сын_</h3>
                 <p>Leader</p>
                 </div>
             </div>
@@ -110,7 +113,7 @@ if ($db->connect('localhost', 'root', '', 'team_database')):
             <div class="swiper-slide slide">
                 <img src="./img/myheroes/328965.jpg" alt="">
                 <div class="content">
-                <h3>Седьмой "Б"</h3>
+                <h3>_Седьмой_"Б"_</h3>
                 <p>Heroes</p>
                 </div>
             </div>
@@ -118,8 +121,8 @@ if ($db->connect('localhost', 'root', '', 'team_database')):
             <div class="swiper-slide slide">
                 <img src="./img/myheroes/4408133.jpg" alt="">
                 <div class="content">
-                <h3>Лариса</h3>
-                <p>Всемогущая</p>
+                <h3>_Лариса_</h3>
+                <p>_Всемогущая_</p>
                 </div>
             </div>
 
