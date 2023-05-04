@@ -28,6 +28,10 @@
 <?php 
 $db = mysqli_init();
 if ($db->real_connect('localhost', 'root', '', 'team_database')):
+
+    $charset = mysqli_character_set_name($db);
+    mysqli_set_charset($db, 'utf8');
+    
     $arr = $db->query("SELECT * FROM `hero` order by id asc");
     if (!$arr) echo "what!?";
     else $arr = $arr->fetch_all();?>

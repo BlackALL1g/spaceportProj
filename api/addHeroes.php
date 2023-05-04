@@ -87,6 +87,10 @@ if (!$db->connect($cfg['hostname'], $cfg['username'],
     echo "cannot connect";
     exit (1); 
 }
+
+$charset = mysqli_character_set_name($db);
+mysqli_set_charset($db, 'utf8');
+
 if ( mysqli_query($db, $sql) !== false )
     echo " ok";
 else 
