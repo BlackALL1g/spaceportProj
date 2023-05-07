@@ -25,7 +25,7 @@
 <section class="page1" id="page1" style="background: url(./img/1957845.jpg) no-repeat">
 
 
-<?php 
+<?php
 $db = mysqli_init();
 if ($db->real_connect('localhost', 'root', '', 'team_database')):
 
@@ -163,6 +163,7 @@ if ($db->real_connect('localhost', 'root', '', 'team_database')):
 
         <div class="card">
 
+
     	    <div class="drag-area">
                 <span class="visible">
                     <span class="select" role="button">Drag & drop image here or Browse</span>
@@ -172,10 +173,9 @@ if ($db->real_connect('localhost', 'root', '', 'team_database')):
 
             </div>
 
-            <!-- IMAGE PREVIEW CONTAINER -->
-            <div class="container" id="container" accept="image/png, image/jpeg, image/jpg, image/pdf" alt="" name="container">
-
-            </div>
+        <!-- IMAGE PREVIEW CONTAINER -->
+        <div class="container" id="container" accept="image/png, image/jpeg, image/jpg, image/pdf" alt="" name="container">
+        </div>
 
         </div>
 

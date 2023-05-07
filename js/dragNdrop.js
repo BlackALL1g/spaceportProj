@@ -5,7 +5,8 @@ dragArea = document.querySelector('.drag-area'),
 input = document.querySelector('.drag-area input'),
 button = document.querySelector('.card button'),
 select = document.querySelector('.drag-area .select'),
-container = document.querySelector('.container');
+container = document.querySelector('.container'),
+page2 = document.querySelector('.page2');
 
 /** CLICK LISTENER */
 select.addEventListener('click', () => input.click());
