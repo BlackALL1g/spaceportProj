@@ -5,7 +5,7 @@ PHP, HTML, CSS, JavaScript, Swiper.js, jQuery, Ajax, MySql.
 
 Adaptive's been made for the next devices:
 
-![alt text](./img/compatibility.png)
+![alt text](./img/compatabilityRess.png)
 
 
 
@@ -51,8 +51,6 @@ debug report:
 D & D 
 ("create" form problems):
 
-1. u can't drag pictures from source
-
-2. u can't finish post request onto the db (upload picture) if  u use drag N drop
+u can't finish post request onto the db (upload picture) if  u use drag N drop
 
 html allows to send only 1 picture whereas js allows to add bunch of them. So u can face the case where u send thru the form few pictures and all of them go to storage, but only last one would be displayed.

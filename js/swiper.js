@@ -40,7 +40,7 @@ var swiper = new Swiper(".team-slider", {
       550: {
         slidesPerView: 2,
       },
-      1000: {
+      1025: {
         slidesPerView: 3,
       },
     },

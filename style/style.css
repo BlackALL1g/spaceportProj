@@ -353,6 +353,8 @@ body{
 .create .card .drag-area.dragover {
     backdrop-filter:  blur(.2rem);
     font-size: 3rem;
+    /* width: 100%; */
+    /* height: 100%; */
 }
 
 .create .card .drag-area.dragover .on-drop {
@@ -453,6 +455,10 @@ body{
     .header .navbar{
         margin-left: 9rem;
     }
+    .page2 .create{
+        width: 90%;
+        margin: 20px 5%;
+    }
 }
 
 @media (max-width: 1200px){
@@ -470,20 +476,54 @@ body{
         padding-top: 20px;
     }
 
-    .page2 form{
+    .page2 .create{
         margin-top: 200px;
     }
     
 }
 
-@media (max-width:991px){
-    
-    html{
-        font-size: 55%;
+/* ipad pro */
+@media(max-width:1024px){
+
+    /* changes photo size, but it breakes compatabiliry for small width devs */
+
+    /* .page1,
+    .page2{
+        height: 80%;
+    } */
+
+    .page2 .heading{
+        width: 90%;
+        margin: 0 5%;
+    }
+    .page2 .create{
+        margin-top: 10px;
+        width: 90%;
+        margin: 10px 5%;
     }
 }
 
-@media (max-width:815px){
+@media (991px <= width <= 821){
+    
+    html{
+        font-size: 70%;
+    }
+
+    .page2 .heading{
+        width: 70%;
+        margin: 0 15%;
+    }
+    .page2 .create{
+        margin-top: 300px;
+    }
+
+}
+
+@media (max-width:820px){
+
+    html{
+        font-size: 55%;
+    }
 
     .page1{
         padding-top: 450px;
@@ -494,28 +534,35 @@ body{
         margin: 30px 10%;
     }
 
-    .page2{
-        padding-top: 20px;
-    }
-
     /* good move  */
 
     .page2 .heading{
-        width: 50%;
-        margin: 0 25%;
+        width: 80%;
+        margin: 0 10%;
+        font-size: 600%;
     }
     /*  !!! */
 
-    .page2 form{
-        margin: 150px 30px;
+    .page2 .create{
+        margin: 100px 30px;
     }
 
     .create .card .container .image img {
         width: 300px;
     }
+
+    .footer{
+        font-size: 300%;
+    }
+
+    .footer h5{
+        font-size: 120% !important;
+    }
+    
+    
 }
 
-@media (max-width:768px){
+@media (max-width:767px){
 
     .header{
         width: 50%;
@@ -561,9 +608,21 @@ body{
 }
 
 @media(max-width:541px){
+
+    .html{
+        font-size: 55%;
+    }
+
+    .page1{
+        padding-top: 30rem;
+    }
     .footer .icons{
         display: grid;
         text-align: center;
+    }
+    .page2 .create{
+        margin-top: 50px;
+        font-size: 20%;
     }
 }
 
@@ -572,30 +631,45 @@ body{
     html{
         font-size: 50%;
     }
-
-    .header .navbar{
-        margin-left: 1rem;
-    }
     
     .page1{
         padding-top: 45rem;
     }
 
+    .page2{
+        margin: 0;
+    }
+
+    .page2 .create{
+        width: 100%;
+        margin: 0;
+    }
+
     .page2 form{
-        width: 90%;
-        margin: 20px 5%;
+        padding-top: 30px;
     }
 
 }
-
+/* iphone SE */
 @media (max-width:375px) {
 
     .page1{
         padding-top: 35rem;
     }
+
+    .header .navbar a{
+        word-spacing: 5px;
+        margin-top: 10px;
+        font-size: 300%;
+    }
     
     .header{
         margin-top: -30px;
+    }
+
+    .page2 .create{
+        font-size: 50%;
+        margin-top: 5px !important;
     }
 
 }
