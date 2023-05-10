@@ -3,9 +3,10 @@ form.onsubmit = (ev) => {
     ev.preventDefault();
     const bodyData = new FormData(form);
     // todo : make warning to user
-    if (bodyData.get('name') === null || bodyData.get('title') === null || bodyData.get('picture') === null)
+    if (bodyData.get('name') === null || bodyData.get('title') === null || bodyData.get('picture') === null && bodyData.get('container')=== null)
         // console.log();
         return;
+    //  && bodyData.get('container') i tried to set up dnd
     
     fetch("./api/addHeroes.php", {
         body:  bodyData ,

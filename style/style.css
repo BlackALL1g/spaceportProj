@@ -19,23 +19,8 @@ html{
     overflow-x: hidden;
 }
 
-/* html::-webkit-scrollbar{
-    width: 1rem;
-}
-
-html::-webkit-scrollbar-track{
-    background: transparent;
-}
- 
-html::-webkit-scrollbar-thumb{
-    background: var(--pink);
-} */
-
-
-
 body{
     background-color: #050505;
-    /* border: 2px solid #E3C79A; */
 }
 
 .page1{
@@ -143,7 +128,6 @@ body{
     height: 32rem;
     overflow: hidden;
     position: relative;
-    /* user-select: none; */
     margin-bottom: 4rem;
 }
  
@@ -152,7 +136,6 @@ body{
     width: 100%;
     object-fit: cover;
     transition: .2s linear;
-    /* user-select: none; */
 }
  
 .team .slide:hover img{
@@ -174,10 +157,6 @@ body{
     transform: translateY(0);
 }
 
-/* .team .slide::selection .content{
-    transform: translateY(0);
-} */
- 
 .team .slide .content h3{
     font-size: 2rem;
     color:var(--black);
@@ -283,9 +262,8 @@ body{
 }
 
 .create .card .drag-area {
-    /* z-index: 2; */
 	width: 100%;
-	height: 24rem;
+	height: 100%;
 	border: var(--border);
 	color: #050505;
 	font-size: 0.9rem;
@@ -303,6 +281,9 @@ body{
 
 .create .card .drag-area .visible {
 	font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .create .card .select {
     color: #050505;
@@ -341,7 +322,6 @@ body{
 }
 
 .create .card .container .image span {
-    z-index: 3;
     display: flex;
     justify-content: right;
 	font-size: 3rem;
@@ -353,8 +333,6 @@ body{
 .create .card .drag-area.dragover {
     backdrop-filter:  blur(.2rem);
     font-size: 3rem;
-    /* width: 100%; */
-    /* height: 100%; */
 }
 
 .create .card .drag-area.dragover .on-drop {
@@ -401,8 +379,6 @@ body{
 
 
 
-
-
 .footer{
     width: 100%;
     font-size: 1.7rem;
@@ -417,11 +393,6 @@ body{
     margin: 0 4rem;
     text-align: center;
 }
-
-.footer .credit{
-
-}
-
 
 .footer .links h5{
     text-align: center;
@@ -442,8 +413,6 @@ body{
     transition: .1s;
     color: rgb(0, 250, 50);
 }
-
-
 
 
 /* media queries */
@@ -541,7 +510,6 @@ body{
         margin: 0 10%;
         font-size: 600%;
     }
-    /*  !!! */
 
     .page2 .create{
         margin: 100px 30px;

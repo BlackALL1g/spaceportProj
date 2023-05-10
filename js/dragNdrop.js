@@ -43,19 +43,22 @@ function delImage(index) {
    showImages();
 }
 
+
 /* DRAG & DROP */
+
+
 dragArea.addEventListener('dragover', e => {
 	e.preventDefault()
 	dragArea.classList.add('dragover')
 })
 
-/* DRAG LEAVE */
+/* drag leave */
 dragArea.addEventListener('dragleave', e => {
 	e.preventDefault()
 	dragArea.classList.remove('dragover')
 });
 
-/* DROP EVENT */
+/* drop event */
 dragArea.addEventListener('drop', e => {
 	e.preventDefault()
     dragArea.classList.remove('dragover');

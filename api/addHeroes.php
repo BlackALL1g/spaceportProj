@@ -4,6 +4,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+print_r($_FILES['container']);
 
 $cfg = [
     'hostname' => 'localhost',
@@ -63,6 +64,9 @@ function load_pict($file, $conf) {
 
 $name = $_POST['name'];
 $title = $_POST['title'];
+// if ($_FILES['container'] ===) {
+//     # code...
+// }
 $pictUri = load_pict($_FILES['picture'], $cfg);
 
 
