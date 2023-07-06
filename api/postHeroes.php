@@ -44,7 +44,7 @@ function load_pict($file, $conf) {
                 }
                 
                 // Redirect back to the homepage (doesn't work)
-                // header("Location: ./api/addHeroes.php?uploadSuccess");
+                // header("Location: ./api/postHeroes.php?uploadSuccess");
             }
             } else {
             echo "File upload failed";

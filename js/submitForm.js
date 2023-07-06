@@ -7,8 +7,11 @@ form.onsubmit = (ev) => {
         // console.log();
         return;
     //  && bodyData.get('container') i tried to set up dnd
+    // Also !!!
+    // don't forget to try it out in teamMaker.
+    // form.ondrag
     
-    fetch("./api/addHeroes.php", {
+    fetch("./api/postHeroes.php", {
         body:  bodyData ,
         method: 'post'
     })
@@ -19,7 +22,7 @@ form.onsubmit = (ev) => {
             throw Error("Api send not 200");
     })
     .then(json => {
-        console.log("submitAjax success", json);
+        console.log("submit success", json);
         
         // fetch the latest data and update the content on the page
         fetch("./api/getHeroes.php")
@@ -37,16 +40,20 @@ form.onsubmit = (ev) => {
                 const slide = document.createElement('div');
                 slide.classList.add('swiper-slide', 'slide');
                 slide.innerHTML = `
+                
                     <img src="${item.picture}" alt="img">
+
                     <div class="content">
                         <h3>${item.name}</h3>
                         <p>${item.title}</p>
+                        
                     </div>
                 `;
                 wrapper.appendChild(slide);
             });
             
             alert('ready!!! The page has been updated!');
+            // window.location.href("#page2");
         })
         .catch(error => {
             console.log('getHeroes failure', error);
@@ -54,7 +61,7 @@ form.onsubmit = (ev) => {
         });
     })
     .catch(error => {
-        console.log('submitAjax failure', error);
+        console.log('submit failure', error);
         alert('something went wrong, not added!');
     });
 };

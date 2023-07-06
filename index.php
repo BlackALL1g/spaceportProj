@@ -57,8 +57,8 @@ if ($db->real_connect('localhost', 'root', '', 'team_database')):
         <?php endforeach;?>
     </div>
 
-<div class="swiper-pagination"></div>   
-</div>
+    <div class="swiper-pagination"></div>   
+    </div>
 
     </section>
 
@@ -150,7 +150,7 @@ if ($db->real_connect('localhost', 'root', '', 'team_database')):
 <p class="heading">Add new character into your team !</p>
 
     <section class="create">
-    <form action="./api/addHeroes.php" method="post" autocomplete="off" id="addform" enctype="multipart/form-data">
+    <form action="./api/postHeroes.php" method="post" autocomplete="off" id="addform" enctype="multipart/form-data">
     <div class="flex">
         <div class="inputBox">
             <span>character's name</span>
@@ -200,8 +200,8 @@ if ($db->real_connect('localhost', 'root', '', 'team_database')):
 <!-- swiper & navBar script -->
 <script src="./js/swiper.js"></script>
 
-<!-- Submit form data via Ajax -->
-<script src="./js/submitAjax.js"></script>
+<!-- Submit form data via pure js -->
+<script src="./js/submitForm.js"></script>
 
 <!-- drag and drop script -->
 <script src="./js/dragNdrop.js"></script>
